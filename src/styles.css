@@ -1,0 +1,51 @@
+body {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 14px;
+  }
+  
+  h1,
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  h1,
+  h2 {
+    font-family: "Lato", sans-serif;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .wrap {
+    padding: 30px;
+  }
+  .spice {
+    margin-bottom: 24px;
+    padding: 30px;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .current-button {
+    margin-left: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .temperature {
+    font-size: calc(1.375rem + 1.5vw);
+    text-align: center;
+  }
+  .center {
+    margin: 0 auto;
+  }
+  .date-name {
+    display: inline-block;
+  }
+  .link-f:hover,
+  .link-c:hover {
+    color: grey;
+  }
+  

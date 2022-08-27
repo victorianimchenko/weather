@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/styles.css">
+    <script
+      src="https://kit.fontawesome.com/30be578806.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container border border-2 rounded wrap">
+      <section class="spice">
+          
+        <div class="row row-cols-1 row-cols-md-3 g-4 search">
+          <div class="col search h-100">
+              <form class="row g-3">
+                  <div class="input-group mb-3 ">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter city"
+                        aria-label="Enter city"
+                        aria-describedby="button-addon2"
+                      />
+                      <button
+                        class="btn btn-outline-secondary search-input"
+                        type="button"
+                        id="button-addon2"
+                      >
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                   </div>
+                </form>
+            <div class="current-button">
+              <button 
+               class="btn btn-outline-primary"
+               type="button"
+               id="btn-current"
+               >Current</button>
+            </div>
+            </div>
+          <div class="col h-50">
+            <img class="sunny-icon" src="images/sunny.png" alt="sunny" />
+            <h1 class="temperature">24°C</h1>
+          </div>
+         
+          <div class="col h-100">
+            <h1 class="city">Sydney</h1>
+            <h2 class="date-name">
+              Saturday
+             
+            </h2> 
+            <span class="time">17:28</span>
+            <h3 class="weather-main">Sunny</h3>
+            <div>
+              <p class="precipitation">Precipitation: 94%</p>
+              <p class="wind">Wind: 3km/h</p>
+              <a class="link-c">°C</a>
+              <span>/</span>
+              <a class="link-f">°F</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section>
+
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+          <div class="col">
+            <div class="card h-100">
+             
+              <div class="card-body center">
+                <h5 class="card-title temperature">Mon</h5>
+              <img src="images/sunny.png" alt="sunny" />
+
+              <p class="card-text temperature">
+                23°C
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+             
+              <div class="card-body center">
+                <h5 class="card-title temperature">Tue</h5>
+              <img src="images/thunderstorms.png" alt="thunder" />
+
+              <p class="card-text temperature">
+                24°C
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+             
+              <div class="card-body center">
+                <h5 class="card-title temperature">Wed</h5>
+              <img src="images/partly_cloudy.png" alt="cloudy" />
+
+              <p class="card-text temperature">
+                22°C
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+             
+              <div class="card-body center">
+                <h5 class="card-title temperature">Thu</h5>
+              <img src="images/rain_s_cloudy.png" alt="rain" />
+
+              <p class="card-text temperature">
+                24°C
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+     
+              <div class="card-body center">
+                <h5 class="card-title temperature">Fri</h5>
+              <img src="images/rain_light.png" alt="snow" />
+
+              <p class="card-text temperature">
+                24°C
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
