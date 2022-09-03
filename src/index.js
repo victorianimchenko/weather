@@ -10,6 +10,7 @@ let days = [
 ];
 let day = days[currentDate.getDay()];
 let hours = currentDate.getHours();
+
 let minutes = currentDate.getMinutes();
 let weekDayEl = document.querySelector("h2");
 let city = document.querySelector(".city");
@@ -18,6 +19,7 @@ weekDayEl.innerHTML = day;
 timeEl.innerHTML = `${hours}:${minutes}`;
 let apiKey = "0a3dadf18b515dd8ef455f89d6ea9344";
 let units = "metric";
+let descriptionEl = document.querySelector(".description");
 let precipitationEl = document.querySelector(".precipitation");
 let windEl = document.querySelector(".wind");
 let formEl = document.querySelector("form");
@@ -28,12 +30,17 @@ let weatherEl = document.querySelector(".weather-main");
 let temperatureEl = document.querySelector(".link-c");
 let faringateEl = document.querySelector(".link-f");
 let imageEl = document.querySelector(".sunny-icon");
+let dataTemp = null;
+
 
 navigator.geolocation.getCurrentPosition(handlePosition);
 
 
+
+
 function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
+  dataTemp = temperature;
 
   if (response.data.weather[0].main === "Clear") {
     imageEl.src = "images/sunny.png";
@@ -58,8 +65,11 @@ function showTemp(response) {
   weatherEl.innerHTML = response.data.weather[0].main;
 
   city.innerHTML = response.data.name;
+  descriptionEl.innerHTML = `${response.data.weather[0].description}`;
   precipitationEl.innerHTML = `${response.data.main.humidity}%`;
   windEl.innerHTML = `${response.data.wind.speed}km/h`;
+  
+  
 }
 
 async function searchCity(event) {
@@ -76,15 +86,12 @@ async function searchCity(event) {
 
 function switchTemperature(event) {
   event.preventDefault();
-
-
-
-
-  let changeEl = document.querySelector(".temperature");
+ let changeEl = document.querySelector(".temperature");
   if (event.target.classList[0] === "link-c") {
-    changeEl.innerHTML = `${33}°C`;
+    changeEl.innerHTML = `${dataTemp ? dataTemp : 33}°C`;
+    
   } else {
-    changeEl.innerHTML = `${66}°F`;
+    changeEl.innerHTML = `${dataTemp ? Math.round((dataTemp*9)/5+32) : 66}°F`;
   }
 }
 
