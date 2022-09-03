@@ -30,7 +30,6 @@ body {
   }
   
   .current-button {
-    margin-left: 10px;
     margin-bottom: 16px;
   }
   
@@ -48,4 +47,6 @@ body {
   .link-c:hover {
     color: grey;
   }
-  
+  .btn-current {
+    width: 100%;
+  }
