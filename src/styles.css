@@ -1,6 +1,7 @@
 body {
     font-family: "Chakra Petch", sans-serif;
     font-size: 14px;
+    background-image: url(../images/bluesky.jpg);
   }
   
   h1,
@@ -17,6 +18,9 @@ body {
     display: block;
     margin: 0 auto;
   }
+  .container {
+    background-color: white;
+  }
   .wrap {
     padding: 30px;
   }
@@ -24,6 +28,9 @@ body {
     margin-bottom: 24px;
     padding: 30px;
   }
+ #forecast {
+  margin-bottom: 24px;
+ }
   .search {
     display: flex;
     align-items: center;
@@ -43,10 +50,26 @@ body {
   .date-name {
     display: inline-block;
   }
+
+  .link-c,
+  .link-f{
+    text-decoration: none;
+    font-size: large;
+  }
+
   .link-f:hover,
   .link-c:hover {
     color: grey;
   }
   .btn-current {
     width: 50%;
+  }
+
+  .forecast-temperature-min {
+    font-size: 30px;
+    opacity: 0,04;
+    color: gray;
+  }
+  .description {
+    font-size: medium;
   }
